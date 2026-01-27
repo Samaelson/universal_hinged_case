@@ -1,5 +1,6 @@
 # universal_hinged_case
-Creates a 3D hinged case arround object to be used for outdoor wall mount
+
+Creates a splashproof 3D hinged case arround object to be used for outdoor wall mount
 
 ![Example of 3D hinged case for object dimensions 100x200x40 in Openscad](images/hinged_case_for_100x200x40_object.png)
 
