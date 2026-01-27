@@ -1,5 +1,6 @@
 include <BOSL2/std.scad>
 
+// Filament shrinkage tolerance value
 t=0.259;
 
 module screw_M2x30_cutout(){
@@ -289,3 +290,4 @@ z_object = 40;
 case_lid(x_object,y_object,z_object,a=45);
 case_body(x_object,y_object,z_object);
 */
+
