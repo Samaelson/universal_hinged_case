@@ -10,4 +10,4 @@ Additional parts needed:
  * 2x magnets 20x10x2-mm-n45-nickel 
  * 2x M2x30 cylinder head screw
 
-##NOTE: For simple use just copy "universal_hinged_case.scad" file to OpenSCAD library folder (https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Libraries) 
+NOTE: For simple use just copy "universal_hinged_case.scad" file to OpenSCAD library folder (https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Libraries) 
