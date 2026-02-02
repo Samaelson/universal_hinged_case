@@ -44,6 +44,9 @@ module Nuki_keypad(){
 // lid opening angle
 angle = 45;
 
+// lid body ration
+lid_body_ratio = 0.1;
+
 // Nuki keypad
 x_object = 29.30;
 y_object = 118.40;
@@ -53,11 +56,11 @@ color([150/255, 60/255, 200/255],0.8)
 Nuki_keypad();
 
  
-case_lid(x_object,y_object,z_object,a=angle);
+case_lid(x_object,y_object,z_object,z_li=lid_body_ratio,a=angle);
 
 
 difference(){
-case_body(x_object,y_object,z_object);
+case_body(x_object,y_object,z_object,z_li=lid_body_ratio);
     translate([0,0,2.5])
     Nuki_keypad();
 }
