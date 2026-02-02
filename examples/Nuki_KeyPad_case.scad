@@ -45,7 +45,7 @@ module Nuki_keypad(){
 angle = 45;
 
 // lid body ration
-lid_body_ratio = 0.1;
+lid_body_ratio = 0.2;
 
 // Nuki keypad
 x_object = 29.30;
