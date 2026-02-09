@@ -108,6 +108,14 @@ module body(x_h=50,y_h=100,z_h=50,z_l=0.2){
 
         chamfers(x_h, y_h);
 
+        translate([-(x_h+5)/2-1.1,y_h/2,(10+t)/2+2.5])
+        rotate([0,90,0])
+        cylinder(h=3.6,r=(15+2*t)/2,$fn=100);
+
+        translate([(x_h+5)/2-2.5,y_h/2,(10+t)/2+2.5])
+        rotate([0,90,0])
+        cylinder(h=3.6,r=(15+2*t)/2,$fn=100);
+
         translate([-(x_h+50)/2, -(y_h+10)/2,z_cut+10])
         cube([x_h+50, y_h+10,z_h]);
  
@@ -167,9 +175,6 @@ module lid(x_h=50,y_h=100,z_h=50,z_l=0.2){
 
                 translate([-(x_h+0.5)/2, -(y_h+2)/2,0])
                 cube([x_h+0.5, y_h+11+t/2-(15+t)/2+13.3,3]);
-
-                translate([0,-20+t/2,0])
-                chamfers(x_h, y_h); 
             
             }
 
@@ -322,4 +327,5 @@ lid_body_ratio = 0.5;
 case_lid(x_object,y_object,z_object,z_li=lid_body_ratio,a=lid_opening_angle);
 case_body(x_object,y_object,z_object,z_li=lid_body_ratio);
 */
+
 
