@@ -166,7 +166,10 @@ module lid(x_h=50,y_h=100,z_h=50,z_l=0.2){
                 screw_cuts(x_h,y_h);
 
                 translate([-(x_h+0.5)/2, -(y_h+2)/2,0])
-                cube([x_h+0.5, y_h+11+t/2-(15+t)/2+13.3,3]);  
+                cube([x_h+0.5, y_h+11+t/2-(15+t)/2+13.3,3]);
+
+                translate([0,-20+t/2,0])
+                chamfers(x_h, y_h); 
             
             }
 
@@ -319,3 +322,4 @@ lid_body_ratio = 0.5;
 case_lid(x_object,y_object,z_object,z_li=lid_body_ratio,a=lid_opening_angle);
 case_body(x_object,y_object,z_object,z_li=lid_body_ratio);
 */
+
