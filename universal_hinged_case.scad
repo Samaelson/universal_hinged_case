@@ -12,27 +12,27 @@ module screw_M2x30_cutout(){
 }
 
 module screw_cuts(x_h=50,y_h=100){
-    translate([-(x_h+7)/2,(y_h)/2,(10+t)/2+2.4])
+    translate([-(x_h+7)/2-0.3,(y_h)/2,(10+t)/2+2.4])
     rotate([0,90,0])
     screw_M2x30_cutout();
 
-    translate([-(x_h+7)/2,(y_h)/2,(10+t)/2+2.5])
+    translate([-(x_h+7)/2-0.3,(y_h)/2,(10+t)/2+2.5])
     rotate([0,90,0])
     screw_M2x30_cutout();
 
-    translate([-(x_h+7)/2,(y_h)/2,(10+t)/2+2.6])
+    translate([-(x_h+7)/2-0.3,(y_h)/2,(10+t)/2+2.6])
     rotate([0,90,0])
     screw_M2x30_cutout();
 
-    translate([(x_h+7)/2,(y_h)/2,(10+t)/2+2.4])
+    translate([(x_h+7)/2+0.4,(y_h)/2,(10+t)/2+2.4])
     rotate([0,-90,0])
     screw_M2x30_cutout();
 
-    translate([(x_h+7)/2,(y_h)/2,(10+t)/2+2.5])
+    translate([(x_h+7)/2+0.3,(y_h)/2,(10+t)/2+2.5])
     rotate([0,-90,0])
     screw_M2x30_cutout();
 
-    translate([(x_h+7)/2,(y_h)/2,(10+t)/2+2.6])
+    translate([(x_h+7)/2+0.3,(y_h)/2,(10+t)/2+2.6])
     rotate([0,-90,0])
     screw_M2x30_cutout();
 }
@@ -183,14 +183,6 @@ module lid(x_h=50,y_h=100,z_h=50,z_l=0.2){
                     translate([0,(4+t/2)/2,(z_h+2.5-(10+t))/2-3])
                     cuboid([x_h+7, y_h+11+t/2,z_h+2.5-(10+t)],rounding=3,$fn=100, edges=[TOP,LEFT+FRONT,RIGHT+FRONT]);
                     
-                    translate([-(x_h+7)/2,y_h/2,(10+t)/2+2.5-(14-t-3)])
-                    rotate([0,90,0])
-                    cylinder(h=2.5,r=(15+t)/2,$fn=100);
-
-                    translate([(x_h+7)/2-2.5,y_h/2,(10+t)/2+2.5-(14-t-3)])
-                    rotate([0,90,0])
-                    cylinder(h=2.5,r=(15+t)/2,$fn=100);
-                  
                     difference(){
                         translate([0,-4/2,(21+t-((10+t)/2+2.5))/2-9])
                         cuboid([x_h+7, y_h+3,21+t-((10+t)/2+2.5)],rounding=3,$fn=100, edges=[LEFT+FRONT,RIGHT+FRONT]);             
@@ -209,7 +201,7 @@ module lid(x_h=50,y_h=100,z_h=50,z_l=0.2){
                 
                 translate([-(x_h+5)/2,(y_h)/2,(10+t)/2+2.5-(11-t)])
                 rotate([0,90,0])
-                cylinder(h=x_h+5,r=(10+t)/2,$fn=100);    
+                cylinder(h=x_h+5,r=(10+2*t)/2,$fn=100);    
                 
                 translate([0,0,-(11-t)])
                 screw_cuts(x_h,y_h);
@@ -327,5 +319,6 @@ lid_body_ratio = 0.5;
 case_lid(x_object,y_object,z_object,z_li=lid_body_ratio,a=lid_opening_angle);
 case_body(x_object,y_object,z_object,z_li=lid_body_ratio);
 */
+
 
 
