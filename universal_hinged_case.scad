@@ -321,9 +321,10 @@ lid_opening_angle = 45;
 lid_body_ratio = 0.5;
 
 
-case_lid(x_object,y_object,z_object,z_li=lid_body_ratio,a=lid_opening_angle);
-case_body(x_object,y_object,z_object,z_li=lid_body_ratio);
+case_lid(x_object,y_object,z_object,z_lbr=lid_body_ratio,a=lid_opening_angle);
+case_body(x_object,y_object,z_object,z_lbr=lid_body_ratio);
 */
+
 
 
 
