@@ -292,7 +292,7 @@ module case_body(x_o=50,y_o=100,z_o=50,x_d=20,y_d=20,z_d=5,z_lbr=0.2){
 //   z_d   = d distance between object and lid.
 //   z_lbr = lid to body ratio [0;1].
 //   a     = lid opening angle.
-module case_lid(x_o=50,y_o=100,z_o=50,x_d=20,y_d=20,z_d=5,z_li=0.2,a=0){
+module case_lid(x_o=50,y_o=100,z_o=50,x_d=20,y_d=20,z_d=5,z_lbr=0.2,a=0){
 
     x_h = x_o + 2*x_d + t;
     y_h = y_o + 2*y_d + t + tan(2)*(x_h/2);
@@ -324,6 +324,7 @@ lid_body_ratio = 0.5;
 case_lid(x_object,y_object,z_object,z_li=lid_body_ratio,a=lid_opening_angle);
 case_body(x_object,y_object,z_object,z_li=lid_body_ratio);
 */
+
 
 
 
