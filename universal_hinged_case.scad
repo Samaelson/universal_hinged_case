@@ -254,11 +254,11 @@ module lid(x_h=50,y_h=100,z_h=50,z_l=0.2){
 //   x_o = x dimensions of object to be placed in the case.
 //   x_o = x dimensions of object to be placed in the case.
 //   ---
-//   x_d  = x distance between object and case.
-//   y_d  = y distance between object and case.
-//   z_d  = d distance between object and lid.
-//   z_li = lid to body reference.
-module case_body(x_o=50,y_o=100,z_o=50,x_d=20,y_d=20,z_d=5,z_li=0.2){
+//   x_d   = x distance between object and case.
+//   y_d   = y distance between object and case.
+//   z_d   = d distance between object and lid.
+//   z_lbr = lid to body ratio [0;1].
+module case_body(x_o=50,y_o=100,z_o=50,x_d=20,y_d=20,z_d=5,z_lbr=0.2){
 
     x_h = x_o + 2*x_d + t;
     y_h = y_o + 2*y_d + t + tan(2)*(x_h/2);
@@ -266,7 +266,7 @@ module case_body(x_o=50,y_o=100,z_o=50,x_d=20,y_d=20,z_d=5,z_li=0.2){
    
     echo("Case size body: x=",x_h,"y=",y_h,"z=",z_h);
     
-    body(x_h,y_h,z_h,z_li);
+    body(x_h,y_h,z_h,z_lbr);
 
 }
 
@@ -287,11 +287,11 @@ module case_body(x_o=50,y_o=100,z_o=50,x_d=20,y_d=20,z_d=5,z_li=0.2){
 //   x_o = x dimensions of object to be placed in the case.
 //   x_o = x dimensions of object to be placed in the case.
 //   ---
-//   x_d  = x distance between object and case.
-//   y_d  = y distance between object and case.
-//   z_d  = d distance between object and lid.
-//   z_li = lid to body reference.
-//   a    = lid opening angle.
+//   x_d   = x distance between object and case.
+//   y_d   = y distance between object and case.
+//   z_d   = d distance between object and lid.
+//   z_lbr = lid to body ratio [0;1].
+//   a     = lid opening angle.
 module case_lid(x_o=50,y_o=100,z_o=50,x_d=20,y_d=20,z_d=5,z_li=0.2,a=0){
 
     x_h = x_o + 2*x_d + t;
@@ -301,7 +301,7 @@ module case_lid(x_o=50,y_o=100,z_o=50,x_d=20,y_d=20,z_d=5,z_li=0.2,a=0){
     translate([0,y_h/2,2*((10+t)/2)-2-t/2])
     rotate([-a,0,0])
     translate([0,-y_h/2,((10+t)/2-2)])
-    lid(x_h,y_h,z_h,z_li);
+    lid(x_h,y_h,z_h,z_lbr);
   
 }
 
@@ -324,6 +324,7 @@ lid_body_ratio = 0.5;
 case_lid(x_object,y_object,z_object,z_li=lid_body_ratio,a=lid_opening_angle);
 case_body(x_object,y_object,z_object,z_li=lid_body_ratio);
 */
+
 
 
 
