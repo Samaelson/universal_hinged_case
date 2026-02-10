@@ -118,7 +118,12 @@ module body(x_h=50,y_h=100,z_h=50,z_l=0.2){
 
         translate([-(x_h+50)/2, -(y_h+10)/2,z_cut+10])
         cube([x_h+50, y_h+10,z_h]);
- 
+
+        translate([-(x_h+2)/2, -(y_h+10)/2+1.5,z_cut+10+1])
+        rotate([70,0,0])
+        translate([0,-5,-5])
+        cube([x_h+2,10,10]);
+
         // Magnet cutout
         translate([-(20+t)/2,y_h/2+1-5,13])
         cube([20+t,2+t,10+t+z_h]);
@@ -319,6 +324,7 @@ lid_body_ratio = 0.5;
 case_lid(x_object,y_object,z_object,z_li=lid_body_ratio,a=lid_opening_angle);
 case_body(x_object,y_object,z_object,z_li=lid_body_ratio);
 */
+
 
 
 
